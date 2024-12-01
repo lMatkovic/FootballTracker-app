@@ -25,6 +25,19 @@ CREATE TABLE Players (
     FOREIGN KEY (ClubID) REFERENCES Clubs(ClubID)
 );
 
+CREATE TABLE Coaches (
+    CoachID INT IDENTITY(1,1) PRIMARY KEY,
+    ClubID INT NOT NULL,
+    FirstName NVARCHAR(100) NOT NULL,
+    LastName NVARCHAR(100) NOT NULL,
+    DateOfBirth DATE,
+    Nationality NVARCHAR(100),
+    ContractStartDate DATE,
+    ContractEndDate DATE,
+    CreatedAt DATETIME DEFAULT GETDATE(),
+    FOREIGN KEY (ClubID) REFERENCES Clubs(ClubID)
+);
+
 CREATE TABLE Matches (
     MatchID INT IDENTITY(1,1) PRIMARY KEY,
     HomeClubID INT NOT NULL,
@@ -45,3 +58,4 @@ CREATE TABLE Users (
     Email NVARCHAR(100) NOT NULL UNIQUE,
     CreatedAt DATETIME DEFAULT GETDATE()
 );
+
