@@ -79,3 +79,18 @@ FOREIGN KEY (AwayClubID) REFERENCES Clubs(ClubID);
 ALTER TABLE Coaches
 ADD CONSTRAINT FK_Coaches_Clubs
 FOREIGN KEY (ClubID) REFERENCES Clubs(ClubID);
+
+
+
+INSERT INTO Clubs (ClubName, Country, City, Stadium, FoundedYear, Manager, League, Website)
+VALUES
+('GNK Dinamo Zagreb', 'Croatia', 'Zagreb', 'Maksimir', 1911, 'Nenad Bjelica', 'SuperSport HNL', 'https://gnkdinamo.hr'),
+('HNK Hajduk Split', 'Croatia', 'Split', 'Poljud', 1911, 'Gennaro Gattuso', 'SuperSport HNL', 'https://hajduk.hr'),
+('NK Osijek', 'Croatia', 'Osijek', 'Opus Arena', 1947, 'Federico Coppitelli', 'SuperSport HNL', 'https://nk-osijek.hr'),
+('HNK Rijeka', 'Croatia', 'Rijeka', 'Rujevica', 1946, 'Sergej Jakirovi?', 'SuperSport HNL', 'https://hnkrijeka.hr'),
+('NK Lokomotiva Zagreb', 'Croatia', 'Zagreb', 'Kranj?evi?eva', 1914, 'Silvijo ?abraja', 'SuperSport HNL', 'https://nklokomotiva.hr'),
+('NK Slaven Belupo', 'Croatia', 'Koprivnica', 'Gradski stadion Koprivnica', 1907, 'Zoran Zeki?', 'SuperSport HNL', 'https://nk-slaven-belupo.hr'),
+('NK Istra 1961', 'Croatia', 'Pula', 'Aldo Drosina', 1961, 'Gonzalo Garcia', 'SuperSport HNL', 'https://nkistra.hr'),
+('HNK Gorica', 'Croatia', 'Velika Gorica', 'ŠRC Velika Gorica', 2009, 'Željko Jopi?', 'SuperSport HNL', 'https://hnk-gorica.hr'),
+('NK Varaždin', 'Croatia', 'Varaždin', 'Stadion Varteks', 1931, 'Mario Kova?evi?', 'SuperSport HNL', 'https://nk-varazdin.hr'),
+('NK Rudeš', 'Croatia', 'Zagreb', 'Stadion Rudeš', 1957, 'Davor Mladina', 'SuperSport HNL', NULL);
