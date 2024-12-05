@@ -1,3 +1,14 @@
+?use master;
+go
+drop database if exists FootballTracker;
+go
+create database FootballTracker;
+go
+use FootballTracker;
+go
+
+
+
 CREATE TABLE Clubs (
     ClubID INT IDENTITY(1,1) PRIMARY KEY,
     ClubName NVARCHAR(100) NOT NULL,
